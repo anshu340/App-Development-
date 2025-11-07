@@ -1,4 +1,6 @@
-﻿namespace App_Development
+﻿using System;
+
+namespace App_Development
 {
     internal class Program
     {
@@ -100,6 +102,58 @@
 
             // Additional information about the TimeSpan
             Console.WriteLine($"\nTotal days lived: {(int)ageTimeSpan.TotalDays} days");
+
+
+            List<string> fruits = new List<string> { "Apple", "Mango", "WaterMelon" };
+            Console.WriteLine("\n=== Working with List<string> ===");
+            Console.WriteLine("Initial fruits:");
+            foreach (string fruit in fruits)
+            {
+                Console.WriteLine($"- {fruit}");
+            }
+
+            // Add a new fruit to the list
+            fruits.Add("Orange");
+            Console.WriteLine("\nAfter adding 'Orange':");
+            foreach (string fruit in fruits)
+            {
+                Console.WriteLine($"- {fruit}");
+            }
+
+            // Remove one fruit from the list
+            fruits.Remove("WaterMelon");  // ✅ Fixed: Match the exact case
+            Console.WriteLine("\nAfter removing 'WaterMelon':");
+            foreach (string fruit in fruits)
+            {
+                Console.WriteLine($"- {fruit}");
+            }
+
+            // Create a Dictionary<int, string> with fruit IDs and names
+            Dictionary<int, string> fruitDictionary = new Dictionary<int, string>
+            {
+                { 1, "Apple" },
+                { 2, "Mango" },
+                { 3, "WaterMelon" }
+            };
+
+            Console.WriteLine("\n=== Working with Dictionary<int, string> ===");
+            Console.WriteLine("Initial dictionary:");
+            foreach (KeyValuePair<int, string> entry in fruitDictionary)
+            {
+                Console.WriteLine($"ID {entry.Key}: {entry.Value}");
+            }
+
+            // Add a new entry to the dictionary
+            fruitDictionary.Add(4, "Orange");
+            Console.WriteLine("\nAfter adding ID 4: Orange:");
+            foreach (KeyValuePair<int, string> entry in fruitDictionary)
+            {
+                Console.WriteLine($"ID {entry.Key}: {entry.Value}");
+            }
+
+            // Display total count
+            Console.WriteLine($"\nTotal fruits in list: {fruits.Count}");
+            Console.WriteLine($"Total entries in dictionary: {fruitDictionary.Count}");
 
         }
     }
