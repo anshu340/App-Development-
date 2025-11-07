@@ -38,10 +38,6 @@ namespace App_Development
             Console.WriteLine($"char: {charVar} ");
             Console.WriteLine($"bool: {boolVar} ");
 
-            Console.WriteLine("\n=== Type Conversions ===");
-            Console.WriteLine($"Integer 42 converted to string: \"{intToString}\"");
-            Console.WriteLine($"String \"3.14\" converted to double: {stringToDouble}");
-
             int[] favoriteNumbers = { 42, 7, 13, 99, 21 };
 
             Console.WriteLine("\nOriginal Array:");
@@ -105,7 +101,7 @@ namespace App_Development
 
 
             List<string> fruits = new List<string> { "Apple", "Mango", "WaterMelon" };
-            Console.WriteLine("\n=== Working with List<string> ===");
+            Console.WriteLine("\n=== List<string> ===");
             Console.WriteLine("Initial fruits:");
             foreach (string fruit in fruits)
             {
@@ -121,7 +117,7 @@ namespace App_Development
             }
 
             // Remove one fruit from the list
-            fruits.Remove("WaterMelon");  // ✅ Fixed: Match the exact case
+            fruits.Remove("WaterMelon"); 
             Console.WriteLine("\nAfter removing 'WaterMelon':");
             foreach (string fruit in fruits)
             {
@@ -136,7 +132,7 @@ namespace App_Development
                 { 3, "WaterMelon" }
             };
 
-            Console.WriteLine("\n=== Working with Dictionary<int, string> ===");
+            Console.WriteLine("\n=== Dictionary<int, string> ===");
             Console.WriteLine("Initial dictionary:");
             foreach (KeyValuePair<int, string> entry in fruitDictionary)
             {
